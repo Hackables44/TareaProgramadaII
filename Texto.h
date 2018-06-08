@@ -5,9 +5,9 @@
 
 // clases que utilizará
 #include "Diccionario.h"
-#include "Palabra.h"
+//#include "Palabra.h"
 #include "string"
-
+#include <fstream>
 
 class Texto{
 	private:
@@ -19,16 +19,16 @@ class Texto{
 		// constructor por omisión
 		Texto();
 		// constructor con parámetro
-		Texto(const Diccionario * diccionarioPtr);
+		Texto(Diccionario * diccionarioPtr);
 		// constructor por copia
-		Texto(const Texto & otro);
+		Texto(Texto & otro);
 		// destructor
 		~Texto();
 
-		Palabra & operator[](int i); // devuelve la palabra en la posición indicada
+		//Palabra & operator[](int i); // devuelve la palabra en la posición indicada
 		int getTamanyo(); // devuelve la cantidad de palabras que forman al hashtag
-		void splitHashtag(string hashtag); // pasa los parámetros al métod para dividir el hashtag
-		void splitHashtagR(string hashtag, string divisionesH, string fragmentoH, int indice); // // divide el hashtag
+		void splitHashtag(string hashtag/*, ofstream & salida*/); // pasa los parámetros al métod para dividir el hashtag
+		void splitHashtagR(string hashtag, string divisionesH, string fragmentoH, int indice/*, ofstream & salida*/); // // divide el hashtag
 
 };
 

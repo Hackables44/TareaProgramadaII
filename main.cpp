@@ -1,8 +1,8 @@
 
 //#include "Diccionario.h"
 #include <iostream>
-#include <fstream>
 #include "Svg.h"
+#include <fstream>
 #include "Diccionario.h"
 #include "Texto.h"
 #include <cstring>
@@ -18,7 +18,7 @@ int main() {
   bool programOn = true;
   Texto texto;
   string hashtag;
-
+	Svg svg;
   ifstream archivo("pruebaEntradaDiccionario.txt", ios::in);
   Diccionario diccionario(archivo);
   fstream hashtagsDoc("hashtags.csv");
@@ -60,6 +60,16 @@ int main() {
 
     case 4:
       cout << "Guardando mejor division de hashtags.\n";
+	  /*
+	  if(!hashtagsDoc.is_open()) std::cout << "Error: File Open" << '\n';
+        while (hashtagsDoc.good()) {
+          getline(hashtagsDoc,hashtag,'\n');
+          cout << hashtag << '\n';
+          std::string textoo = hashtag;
+          texto.splitHashtag(textoo);
+        }
+      hashtagsDoc.close();*/
+	  texto.splitHashtag("holamundo");
     break;
 
     case 5:

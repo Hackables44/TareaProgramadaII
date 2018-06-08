@@ -6,6 +6,6 @@ class Svg{
 	public:
 	
 		Svg();
-		void crearSvg(Diccionario&);
+		void crearSvg();
 };
 #endif

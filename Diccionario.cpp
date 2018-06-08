@@ -1,3 +1,15 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   Diccionario.cpp
+ * Author: John
+ * 
+ * Created on 23 de abril de 2018, 03:51 PM
+ */
 
 #include "Diccionario.h"
 
@@ -110,7 +122,7 @@ Diccionario::~Diccionario() {
 void Diccionario::operator+=(char* palabra) {
 
     string agregar;
-    if (palabra != '\0') {//condicion de entrada si la palabra esta vacia
+    if (palabra != 0) {//condicion de entrada si la palabra esta vacia
         if (!raiz) {
             raiz = new Nodo();
         }
@@ -128,6 +140,7 @@ void Diccionario::operator+=(char* palabra) {
     }
 }
 
+/*
 void Diccionario::operator+=(Palabra& palabra) {
 
     string agregar;
@@ -150,6 +163,7 @@ void Diccionario::operator+=(Palabra& palabra) {
         raiz->agregarPalabra(vector, 0);
     }
 }
+*/
 
 bool Diccionario::operator[](char* palabra) {
     bool esta;
@@ -167,6 +181,7 @@ bool Diccionario::operator[](char* palabra) {
     return esta;
 }
 
+/*
 bool Diccionario::operator[](Palabra & palabra) {
     char* palabra2 = palabra.getPalabra();
     string agregar;
@@ -184,154 +199,158 @@ bool Diccionario::operator[](Palabra & palabra) {
     return esta;
 
 }
+*/
 
 string Diccionario::Nodo::asignarLetra(int num) {
 
     string retorno;
-        switch (num) {
-            case 0: retorno = "a";
-                break;
-            case 1: retorno = "b";
-                break;
-            case 2: retorno = "c";
-                break;
-            case 3: retorno = "d";
-                break;
-            case 4: retorno = "e";
-                break;
-            case 5: retorno = "f";
-                break;
-            case 6: retorno = "g";
-                break;
-            case 7: retorno = "h";
-                break;
-            case 8: retorno = "i";
-                break;
-            case 9: retorno = "j";
-                break;
-            case 10: retorno = "k";
-                break;
-            case 11: retorno = "l";
-                break;
-            case 12: retorno = "m";
-                break;
-            case 13: retorno = "n";
-                break;
-            case 14: retorno = "o";
-                break;
-            case 15: retorno = "p";
-                break;
-            case 16: retorno = "q";
-                break;
-            case 17: retorno = "r";
-                break;
-            case 18: retorno = "s";
-                break;
-            case 19: retorno = "t";
-                break;
-            case 20: retorno = "u";
-                break;
-            case 21: retorno = "v";
-                break;
-            case 22: retorno = "w";
-                break;
-            case 23: retorno = "x";
-                break;
-            case 24: retorno = "y";
-                break;
-            case 25: retorno = "z";
-                break;
-            case 26: retorno = "á";
-                break;
-            case 27: retorno = "é";
-                break;
-            case 28: retorno = "í";
-                break;
-            case 29: retorno = "ó";
-                break;
-            case 30: retorno = "ú";
-                break;
-            case 31: retorno = "ü";
-                break;
-            case 32: retorno = "ñ";
-                break;
-            case 33: retorno = "$";
-                break;
+    switch (num) {
+        case 0: retorno = "a";
+            break;
+        case 1: retorno = "b";
+            break;
+        case 2: retorno = "c";
+            break;
+        case 3: retorno = "d";
+            break;
+        case 4: retorno = "e";
+            break;
+        case 5: retorno = "f";
+            break;
+        case 6: retorno = "g";
+            break;
+        case 7: retorno = "h";
+            break;
+        case 8: retorno = "i";
+            break;
+        case 9: retorno = "j";
+            break;
+        case 10: retorno = "k";
+            break;
+        case 11: retorno = "l";
+            break;
+        case 12: retorno = "m";
+            break;
+        case 13: retorno = "n";
+            break;
+        case 14: retorno = "o";
+            break;
+        case 15: retorno = "p";
+            break;
+        case 16: retorno = "q";
+            break;
+        case 17: retorno = "r";
+            break;
+        case 18: retorno = "s";
+            break;
+        case 19: retorno = "t";
+            break;
+        case 20: retorno = "u";
+            break;
+        case 21: retorno = "v";
+            break;
+        case 22: retorno = "w";
+            break;
+        case 23: retorno = "x";
+            break;
+        case 24: retorno = "y";
+            break;
+        case 25: retorno = "z";
+            break;
+        case 26: retorno = "Ã¡";
+            break;
+        case 27: retorno = "Ã©";
+            break;
+        case 28: retorno = "Ã­";
+            break;
+        case 29: retorno = "Ã³";
+            break;
+        case 30: retorno = "Ãº";
+            break;
+        case 31: retorno = "Ã¼";
+            break;
+        case 32: retorno = "Ã±";
+            break;
+        case 33: retorno = "$";
+            break;
     }
-        return retorno;
+    return retorno;
 }
 
 string Diccionario::Nodo::asignarMayuscula(int num) {
     string retorno;
-        switch (num) {
-            case 0: retorno = "A";
-                break;
-            case 1: retorno = "B";
-                break;
-            case 2: retorno = "C";
-                break;
-            case 3: retorno = "D";
-                break;
-            case 4: retorno = "E";
-                break;
-            case 5: retorno = "F";
-                break;
-            case 6: retorno = "G";
-                break;
-            case 7: retorno = "H";
-                break;
-            case 8: retorno = "I";
-                break;
-            case 9: retorno = "J";
-                break;
-            case 10: retorno = "K";
-                break;
-            case 11: retorno = "L";
-                break;
-            case 12: retorno = "M";
-                break;
-            case 13: retorno = "N";
-                break;
-            case 14: retorno = "O";
-                break;
-            case 15: retorno = "P";
-                break;
-            case 16: retorno = "Q";
-                break;
-            case 17: retorno = "R";
-                break;
-            case 18: retorno = "S";
-                break;
-            case 19: retorno = "T";
-                break;
-            case 20: retorno = "U";
-                break;
-            case 21: retorno = "V";
-                break;
-            case 22: retorno = "W";
-                break;
-            case 23: retorno = "X";
-                break;
-            case 24: retorno = "Y";
-                break;
-            case 25: retorno = "Z";
-                break;
-            case 26: retorno = "Á";
-                break;
-            case 27: retorno = "É";
-                break;
-            case 28: retorno = "Í";
-                break;
-            case 29: retorno = "Ó";
-                break;
-            case 30: retorno = "Ú";
-                break;
-            case 31: retorno = "Ü";
-                break;
-            case 32: retorno = "Ñ";
-                break;
-            case 33: retorno = "$";
-                break;
+    switch (num) {
+        case 0: retorno = "A";
+            break;
+        case 1: retorno = "B";
+            break;
+        case 2: retorno = "C";
+            break;
+        case 3: retorno = "D";
+            break;
+        case 4: retorno = "E";
+            break;
+        case 5: retorno = "F";
+            break;
+        case 6: retorno = "G";
+            break;
+        case 7: retorno = "H";
+            break;
+        case 8: retorno = "I";
+            break;
+        case 9: retorno = "J";
+            break;
+        case 10: retorno = "K";
+            break;
+        case 11: retorno = "L";
+            break;
+        case 12: retorno = "M";
+            break;
+        case 13: retorno = "N";
+            break;
+        case 14: retorno = "O";
+            break;
+        case 15: retorno = "P";
+            break;
+        case 16: retorno = "Q";
+            break;
+        case 17: retorno = "R";
+            break;
+        case 18: retorno = "S";
+            break;
+        case 19: retorno = "T";
+            break;
+        case 20: retorno = "U";
+            break;
+        case 21: retorno = "V";
+            break;
+        case 22: retorno = "W";
+            break;
+        case 23: retorno = "X";
+            break;
+        case 24: retorno = "Y";
+            break;
+        case 25: retorno = "Z";
+            break;
+        case 26: retorno = "Ã";
+            break;
+        case 27: retorno = "Ã‰";
+            break;
+        case 28: retorno = "Ã";
+            break;
+        case 29: retorno = "Ã“";
+            break;
+        case 30: retorno = "Ãš";
+            break;
+        case 31: retorno = "Ãœ";
+            break;
+        case 32: retorno = "Ã‘";
+            break;
+        case 33: retorno = "$";
+            break;
     }
-        return retorno;
+    return retorno;
 }
+
+
+

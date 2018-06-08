@@ -2,13 +2,13 @@
 #include <iostream>
 #include "Svg.h"
 #include <string>
-#include "Diccionario.h"
+//#include "Diccionario.h"
 using namespace std;
 
 Svg::Svg(){};
 
 
-void Svg::crearSvg(Diccionario& diccionario){
+void Svg::crearSvg(){
 	string entrada;
 	cin >> entrada;
 	int longitud;

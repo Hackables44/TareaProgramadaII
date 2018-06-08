@@ -1,0 +1,3 @@
+cd C:\Users\b77284\Downloads\TareaProgramadaII-version1\TareaProgramadaII-version1
+g++ *.cpp -o prueba
+prueba
