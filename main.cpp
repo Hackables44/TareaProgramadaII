@@ -2,6 +2,7 @@
 //#include "Diccionario.h"
 #include <iostream>
 #include <fstream>
+#include "Svg.h"
 #include "Diccionario.h"
 #include "Texto.h"
 #include <cstring>
@@ -63,7 +64,7 @@ int main() {
 
     case 5:
       cout << "Ingrese la palabara que desea buscar.\n";
-      //cin>>palabra;
+      svg.crearSvg();
     break;
 
     case 6:
